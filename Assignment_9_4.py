@@ -14,7 +14,7 @@ data = dict()
 for line in handle:
     line = line.rstrip()
     #print line
-    if not line.startswith("From:"):
+    if not line.startswith("From "):
         continue
     pieces = line.split(" ")
     data [pieces[1]] = data.get(pieces[1],0) + 1 #count frequency of each email
